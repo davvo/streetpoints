@@ -17,15 +17,29 @@ $ npm install
 
 ## Extract roads from osm ##
 ```
-./osm2geojson.js \
+$ ./osm2geojson.js \
   --pg <postgres_url> \
   --bbox <bbox>
 ```
 ### Example ###
 Extract all roads around Bologna, Italy. Save output in roads.geojson.
 ```
-./osm2geojson.js \
+$ ./osm2geojson.js \
   --pg postgres://localhost:5432 \
   --bbox 11.319694519042969,44.479850447910444,11.367416381835938,44.51070720877548 \
   > roads.geojson
+```
+
+## Create points
+
+```
+$ ./geojson2csv.js \
+  --format <csv|geojson> \
+  <in_file.geojson>
+```
+
+### Example ###
+Create points csv from roads.geojson. Save output in points.csv.
+```
+$ ./geojson2csv.js roads.geojson > points.csv
 ```
