@@ -19,6 +19,13 @@ $ npm install
 ```
 ./osm2geojson.js \
   --pg <postgres_url> \
-  --bbox minLng,minLat,maxLng,maxLat \
+  --bbox <bbox>
+```
+### Example ###
+Extract all roads around Bologna, Italy. Save output in roads.geojson.
+```
+./osm2geojson.js \
+  --pg postgres://localhost:5432 \
+  --bbox 11.319694519042969,44.479850447910444,11.367416381835938,44.51070720877548 \
   > roads.geojson
 ```
