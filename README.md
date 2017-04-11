@@ -30,17 +30,13 @@ $ ./osm2geojson.js \
   > roads.geojson
 ```
 
-## Create points
+## Extract points from roads
 ```
 $ ./geojson2csv.js [options] file
 ```
 
 ### Example ###
-Create points csv from roads.geojson. Save output in points.csv.
+Extract points from roads.geojson. Save output in points.csv.
 ```
 $ ./geojson2csv.js roads.geojson > points.csv
-```
-Create points geojson from roads.geojson. Save output in points.geojson.
-```
-$ ./geojson2csv.js --format geojson roads.geojson > points.geojson
 ```
