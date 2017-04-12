@@ -15,7 +15,7 @@ const pg = require('pg')
 const mercator = require('globalmercator')
 const args = require('minimist')(process.argv.slice(2))
 
-const postgresUrl = args.pg || process.env.POSTGRES_URL || 'postgres://locahost:5432/gis'
+const postgresUrl = args.pg || process.env.POSTGRES_URL || 'postgres://localhost:5432/gis'
 
 let bbox
 try {
