@@ -2,16 +2,15 @@
 
 There are two scripts:
 
-* extroads.js - Extract roads from an [OpenStreetMap](https://www.openstreetmap.org/) database to a GeoJSON file.
-* extpoints.js - Extract points from the GeoJSON file.
+* extroads.js - Extract roads from an [OpenStreetMap](https://www.openstreetmap.org/) database and writes GeoJSON to stdout.
+* extpoints.js - Extract points from a GeoJSON file or reads from stdin.
 
 ## Example usage ##
 Extract roads from a local osm database
 ```
 $ ./extroads.js \
   --pg postgres://localhost:5432/gis \
-  9.610956,45.724823,9.720132,45.656594 \
-  > bergamo.geojson
+  9.610956,45.724823,9.720132,45.656594 > bergamo.geojson
 
 $ cat bergamo.geojson
 {
