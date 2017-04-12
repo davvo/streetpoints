@@ -1,89 +1,89 @@
-node extroads.js --pg postgres://104.199.41.52/gis --bbox 12.324845,42.046787,12.745949,41.770971 > roma.geojson 
-node extpoints.js roma.geojson > roma.csv
+./extroads.js 12.324845,42.046787,12.745949,41.770971 > roma.geojson 
+./extpoints.js roma.geojson > roma.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox 9.027355,45.550295,9.315402,45.383193 > milano.geojson 
-node extpoints.js milano.geojson > milano.csv
+./extroads.js 9.027355,45.550295,9.315402,45.383193 > milano.geojson 
+./extpoints.js milano.geojson > milano.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  14.128497,40.923004,14.377406,40.796550 > napoli.geojson
-node extpoints.js napoli.geojson > napoli.csv
+./extroads.js 14.128497,40.923004,14.377406,40.796550 > napoli.geojson
+./extpoints.js napoli.geojson > napoli.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  7.559880,45.139906,7.776174,45.003157 > torino.geojson
-node extpoints.js torino.geojson > torino.csv
+./extroads.js 7.559880,45.139906,7.776174,45.003157 > torino.geojson
+./extpoints.js torino.geojson > torino.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  13.252229,38.226551,13.458223,38.060224 > palermo.geojson
-node extpoints.js palermo.geojson > palermo.csv
+./extroads.js 13.252229,38.226551,13.458223,38.060224 > palermo.geojson
+./extpoints.js palermo.geojson > palermo.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  8.684142,44.518440,9.086517,44.375303 > genova.geojson
-node extpoints.js genova.geojson > genova.csv
+./extroads.js 8.684142,44.518440,9.086517,44.375303 > genova.geojson
+./extpoints.js genova.geojson > genova.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.205340,44.563464,11.449786,44.431471 > bologna.geojson
-node extpoints.js bologna.geojson > bologna.csv
+./extroads.js 11.205340,44.563464,11.449786,44.431471 > bologna.geojson
+./extpoints.js bologna.geojson > bologna.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.135909,43.837417,11.334006,43.720416 > firenze.geojson
-node extpoints.js firenze.geojson > firenze.csv
+./extroads.js 11.135909,43.837417,11.334006,43.720416 > firenze.geojson
+./extpoints.js firenze.geojson > firenze.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  16.718199,41.170994,16.962988,41.058219 > bari.geojson
-node extpoints.js bari.geojson > bari.csv
+./extroads.js 16.718199,41.170994,16.962988,41.058219 > bari.geojson
+./extpoints.js bari.geojson > bari.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  15.011597,37.562844,15.136910,37.416558 > catani.geojson
-node extpoints.js catani.geojson > catani.csv
+./extroads.js 15.011597,37.562844,15.136910,37.416558 > catani.geojson
+./extpoints.js catani.geojson > catani.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  12.140736,45.580728,12.626693,45.225577 > venezia.geojson
-node extpoints.js venezia.geojson > venezia.csv
+./extroads.js 12.140736,45.580728,12.626693,45.225577 > venezia.geojson
+./extpoints.js venezia.geojson > venezia.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.904295,45.481621,11.088316,45.364994 > verona.geojson
-node extpoints.js verona.geojson > verona.csv
+./extroads.js 10.904295,45.481621,11.088316,45.364994 > verona.geojson
+./extpoints.js verona.geojson > verona.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.795456,45.468636,11.977760,45.348604 > padova.geojson
-node extpoints.js padova.geojson > padova.csv
+./extroads.js 11.795456,45.468636,11.977760,45.348604 > padova.geojson
+./extpoints.js padova.geojson > padova.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  13.724951,45.700275,13.855414,45.607403 > trieste.geojson
-node extpoints.js trieste.geojson > trieste.csv
+./extroads.js 13.724951,45.700275,13.855414,45.607403 > trieste.geojson
+./extpoints.js trieste.geojson > trieste.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.130293,45.594298,10.303671,45.485126 > brescia.geojson
-node extpoints.js brescia.geojson > brescia.csv
+./extroads.js 10.130293,45.594298,10.303671,45.485126 > brescia.geojson
+./extpoints.js brescia.geojson > brescia.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.260564,44.843215,10.391370,44.751125 > parma.geojson
-node extpoints.js parma.geojson > parma.csv
+./extroads.js 10.260564,44.843215,10.391370,44.751125 > parma.geojson
+./extpoints.js parma.geojson > parma.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.010402,43.924550,11.147388,43.826794 > prato.geojson
-node extpoints.js prato.geojson > prato.csv
+./extroads.js 11.010402,43.924550,11.147388,43.826794 > prato.geojson
+./extpoints.js prato.geojson > prato.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.838302,44.695811,10.992798,44.599575 > modena.geojson
-node extpoints.js modena.geojson > modena.csv
+./extroads.js 10.838302,44.695811,10.992798,44.599575 > modena.geojson
+./extpoints.js modena.geojson > modena.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.545912,44.749661,10.725813,44.647409 > reggio_emilia.geojson
-node extpoints.js reggio_emilia.geojson > reggio_emilia.csv
+./extroads.js 10.545912,44.749661,10.725813,44.647409 > reggio_emilia.geojson
+./extpoints.js reggio_emilia.geojson > reggio_emilia.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  12.301701,43.148123,12.470616,43.035803 > perugia.geojson
-node extpoints.js perugia.geojson > perugia.csv
+./extroads.js 12.301701,43.148123,12.470616,43.035803 > perugia.geojson
+./extpoints.js perugia.geojson > perugia.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  12.158795,44.442126,12.239819,44.382900 > ravenna.geojson
-node extpoints.js ravenna.geojson > ravenna.csv
+./extroads.js 12.158795,44.442126,12.239819,44.382900 > ravenna.geojson
+./extpoints.js ravenna.geojson > ravenna.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  10.285176,43.595251,10.373410,43.483008 > livorno.geojson
-node extpoints.js livorno.geojson > livorno.csv
+./extroads.js 10.285176,43.595251,10.373410,43.483008 > livorno.geojson
+./extpoints.js livorno.geojson > livorno.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  9.064863,39.267009,9.183996,39.188687 > cagliari.geojson
-node extpoints.js cagliari.geojson > cagliari.csv
+./extroads.js 9.064863,39.267009,9.183996,39.188687 > cagliari.geojson
+./extpoints.js cagliari.geojson > cagliari.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  15.511811,41.482422,15.589574,41.433535 > foggia.geojson
-node extpoints.js foggia.geojson > foggia.csv
+./extroads.js 15.511811,41.482422,15.589574,41.433535 > foggia.geojson
+./extpoints.js foggia.geojson > foggia.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  12.504649,44.088608,12.639746,44.018657 > rimini.geojson
-node extpoints.js rimini.geojson > rimini.csv
+./extroads.js 12.504649,44.088608,12.639746,44.018657 > rimini.geojson
+./extpoints.js rimini.geojson > rimini.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  14.722789,40.712744,14.850849,40.633846 > salerno.geojson
-node extpoints.js salerno.geojson > salerno.csv
+./extroads.js 14.722789,40.712744,14.850849,40.633846 > salerno.geojson
+./extpoints.js salerno.geojson > salerno.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.532287,44.876756,11.675281,44.795684 > ferrara.geojson
-node extpoints.js ferrara.geojson > ferrara.csv
+./extroads.js 11.532287,44.876756,11.675281,44.795684 > ferrara.geojson
+./extpoints.js ferrara.geojson > ferrara.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.069542,46.133521,11.162582,46.025163 > trento.geojson
-node extpoints.js trento.geojson > trento.csv
+./extroads.js 11.069542,46.133521,11.162582,46.025163 > trento.geojson
+./extpoints.js trento.geojson > trento.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  11.303212,46.515935,11.387669,46.459558 > bolzano.geojson
-node extpoints.js bolzano.geojson > bolzano.csv
+./extroads.js 11.303212,46.515935,11.387669,46.459558 > bolzano.geojson
+./extpoints.js bolzano.geojson > bolzano.csv
 
-node extroads.js --pg postgres://104.199.41.52/gis --bbox  9.610956,45.724823,9.720132,45.656594 > bergamo.geojson
-node extpoints.js bergamo.geojson > bergamo.csv
+./extroads.js 9.610956,45.724823,9.720132,45.656594 > bergamo.geojson
+./extpoints.js bergamo.geojson > bergamo.csv
