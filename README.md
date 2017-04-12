@@ -54,10 +54,7 @@ $ cat bergamp.csv
 ```
 The two scripts can be combined into one line
 ```
-$ ./extroads.js \
-  --pg postgres://localhost:5432/gis \
-  9.610956,45.724823,9.720132,45.656594 \
-  | ./extpoints.js
+$ ./extroads.js 9.610956,45.724823,9.720132,45.656594 | ./extpoints.js
 ```
 
 ## Prerequisites ##
