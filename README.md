@@ -68,7 +68,7 @@ https://switch2osm.org/loading-osm-data/
 
 ## Install ##
 ```
-$ git clone git@bitbucket.org:sodra/streetpoints.git
+$ git clone https://github.com/davvo/streetpoints.git
 $ cd streetpoints
 $ npm install
 ```
