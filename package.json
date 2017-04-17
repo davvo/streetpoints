@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "globalmercator": "^0.2.3",
+    "line-intersect": "^1.0.0",
     "minimist": "^1.2.0",
     "pg": "^6.1.5",
     "rbush": "^2.0.1"
