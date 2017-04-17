@@ -14,6 +14,7 @@ const mercator = require('globalmercator')
 const lineIntersect = require('line-intersect')
 const args = require('minimist')(process.argv.slice(2))
 
+// Find a point at a certain distance of a linestring
 const pointAtDistance = (coords,  distance) => {
 	let soFar = 0
 	for (let i = 0; i < coords.length - 1; i++) {
@@ -30,12 +31,14 @@ const pointAtDistance = (coords,  distance) => {
 	}	
 }
 
+// Calculate length (in meters) of one line segment
 const segLength = (a, b) => {
 	const ma = mercator.latLonToMeters(a[1], a[0])
 	const mb = mercator.latLonToMeters(b[1], b[0])
 	return Math.sqrt(Math.pow(mb[0] - ma[0], 2) + Math.pow(mb[1] - ma[1], 2))	
 }
 
+// Calculate length (in meters) of linestring
 const lineStringLength = (coords) => {
 	let length = 0
 	for (let i = 0; i < coords.length - 1; i++) {
@@ -44,6 +47,7 @@ const lineStringLength = (coords) => {
 	return length
 }
 
+// Read input from file or stdin
 const readInput = () => new Promise((resolve, reject) => {
 
 	if (args._.length > 0) {
@@ -64,9 +68,11 @@ const readInput = () => new Promise((resolve, reject) => {
 	})
 })
 
+// Find crossroads
 const findIntersections = (geojson) => {
 	const segments = rbush()
 
+	// Add all road segments to spatial index
 	geojson.features.forEach((feature, index) => {
 		const coords = feature.geometry.coordinates
 		for (let i = 0; i < coords.length - 1; i++) {
@@ -85,6 +91,7 @@ const findIntersections = (geojson) => {
 
 	const points = []
 
+	// Iterate segments and find points where two different roads intersect
 	segments.all().forEach(item => {
 		segments.search(item).forEach(other => {
 			if (item.road === other.road) {
@@ -103,9 +110,11 @@ const findIntersections = (geojson) => {
 	return points
 }
 
+// Extract points from feature collection of linestrings (roads)
 const extractPoints = (geojson) => {
 	const points = rbush()
 
+	// Add a point if it not collides with another (already added) point.
 	const addPoint = (coords) => {
 		const m = mercator.latLonToMeters(coords[1], coords[0])
 		if (points.search({
@@ -124,14 +133,17 @@ const extractPoints = (geojson) => {
 		}
 	}
 
+	// Find all crossroads
 	findIntersections(geojson).forEach(point => addPoint(point))
 
+	// Find start and stop for every road
 	geojson.features.forEach(feature => {
 		const coords = feature.geometry.coordinates
 		addPoint(coords[0])
 		addPoint(coords[coords.length - 1])
 	})
 
+	// Trace roads (max 20 meters / step)
 	geojson.features.forEach(feature => {
 		const coords = feature.geometry.coordinates
 
@@ -148,6 +160,7 @@ const extractPoints = (geojson) => {
 	return points.all().map(item => item.point)
 }
 
+// Print ouput
 const print = (points) => {
 	if (args.format === 'geojson') {
 		printGeoJSON(points)
@@ -156,6 +169,7 @@ const print = (points) => {
 	}	
 }
 
+// Print ouput as geojson
 const printGeoJSON = (points) => {
 	console.log(JSON.stringify({
 		type: 'FeatureCollection',
@@ -173,12 +187,14 @@ const printGeoJSON = (points) => {
 	}, null, 2))
 }
 
+// Print output as CSV
 const printCSV = (points) => {
 	points.forEach((point, index) => {
 		console.log([point[1], point[0]].join(';'))
 	})
 }
 
+// Let's do this!
 readInput().then(geojson => {
 	const points = extractPoints(geojson)
 	print(points)	
