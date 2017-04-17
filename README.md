@@ -8,9 +8,7 @@ There are two scripts:
 ## Example usage ##
 Extract roads from a local osm database
 ```
-$ ./extroads.js \
-  --pg postgres://localhost:5432/gis \
-  9.610956,45.724823,9.720132,45.656594 > bergamo.geojson
+$ ./extroads.js 9.610956,45.724823,9.720132,45.656594 > bergamo.geojson
 
 $ cat bergamo.geojson
 {
@@ -40,7 +38,7 @@ Extract points from the resulting GeoJSON file
 ```
 $ ./extpoints.js bergamo.geojson > bergamo.csv
 
-$ cat bergamp.csv
+$ cat bergamo.csv
 45.677882607401145;9.604711110164414
 45.67788912878708;9.604890530608568
 45.677895650172275;9.605069951052723
@@ -70,7 +68,7 @@ https://switch2osm.org/loading-osm-data/
 
 ## Install ##
 ```
-$ git clone git@bitbucket.org:sodra/streetpoints.git
+$ git clone https://github.com/davvo/streetpoints.git
 $ cd streetpoints
 $ npm install
 ```
