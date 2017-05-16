@@ -2,10 +2,15 @@
   "name": "streetpoints",
   "version": "1.0.0",
   "dependencies": {
+    "async": "^2.4.0",
+    "geojson-bbox": "0.0.0",
+    "geojson-flatten": "^0.2.1",
     "globalmercator": "^0.2.3",
     "line-intersect": "^1.0.0",
+    "lineclip": "^1.1.5",
     "minimist": "^1.2.0",
     "pg": "^6.1.5",
+    "point-in-polygon": "^1.0.1",
     "rbush": "^2.0.1"
   }
 }
