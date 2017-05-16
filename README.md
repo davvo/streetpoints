@@ -130,6 +130,7 @@ $ ./extpoints2.js geojson/italy.geojson --filter NAME_2=Bergamo --name_property 
 
 ## Getting data ##
 * Administrative areas from the whole world can be downloaded at [www.gadm.org](http://www.gadm.org) (must be converted to geojson from e.g shapefile).
+* Up-to-date areas (comune) for Italy can be found at [www.istat.it](http://www.istat.it/it/archivio/124086)
 * [geojson.io](http://geojson.io) is a simple tool where you can draw polygons and save as geojson.
 
 ## Prerequisites ##
