@@ -103,7 +103,7 @@ $ ./extpoints2.js geojson/italy.geojson --filter NAME_3=Bergamo,Curno --name_pro
 45.688961;9.602863;Curno
 ```
 
-This example will trace roads that belong to the *province* Bergamo
+This example will trace roads that belong to the **province** of Bergamo
 ```
 $ ./extpoints2.js geojson/italy.geojson --filter NAME_2=Bergamo --name_property NAME_3
 
