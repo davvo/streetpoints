@@ -81,6 +81,7 @@ $ ./extpoints2.js geojson/sthlm.geojson
 59.313984;18.034002;Södermalm
 59.313452;18.032395;Södermalm
 
+```
 
 Filter input and specify alternate name property. This example will only trace roads inside polygons where the value of property NAME_3 is Bergamo or Curno. It will also use the value from NAME_3 as name in the output.
 ```
@@ -100,7 +101,7 @@ $ ./extpoints2.js geojson/italy.geojson --filter NAME_3=Bergamo,Curno --name_pro
 45.688732;9.602829;Curno
 45.688853;9.602847;Curno
 45.688961;9.602863;Curno
-
+```
 
 ## Prerequisites ##
 You need to have [NodeJS](https://nodejs.org/en/) (version 6 or higher) installed. On mac you can use homebrew
