@@ -83,7 +83,7 @@ $ ./extpoints2.js geojson/sthlm.geojson
 
 ```
 
-Filter input and specify alternate name property. This example will only trace roads inside polygons where the value of property NAME_3 is Bergamo or Curno. It will also use the value from NAME_3 as name in the output.
+Filter input and specify an alternative name property. This example will only trace roads inside polygons where property NAME_3 is equal to Bergamo or Curno. It will also use the value from NAME_3 as name in the output.
 ```
 $ ./extpoints2.js geojson/italy.geojson --filter NAME_3=Bergamo,Curno --name_property NAME_3
 
