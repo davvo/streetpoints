@@ -1,9 +1,10 @@
 # streetpoints #
 
-There are two scripts:
+There are three scripts:
 
 * extroads.js - Extract roads from an [OpenStreetMap](https://www.openstreetmap.org/) database and writes GeoJSON to stdout.
-* extpoints.js - Extract points from a GeoJSON file or reads from stdin.
+* extpoints.js - Extract points from a GeoJSON file (or reads from stdin) and writes CSV to stdout.
+* extpoints2.js - Extract points from [OpenStreetMap](https://www.openstreetmap.org/) and writes CSV to stdout.
 
 ## Example usage ##
 Extract roads from a local osm database
@@ -53,6 +54,53 @@ The two scripts can be combined into one line
 ```
 $ ./extroads.js 9.610956,45.724823,9.720132,45.656594 | ./extpoints.js
 ```
+
+Extract points from a local osm database. The first argument should be a geojson file containing features of type Polygon (or MultiPolygon).
+Only points that are contained by a polygon will be written to output. If the polygon has a "name"-property it will be written after the
+coordinates.
+```
+$ ./extpoints2.js geojson/sthlm.geojson
+
+59.326354;18.068223;Gamla stan
+59.32633;18.068389;Gamla stan
+59.326305;18.068554;Gamla stan
+59.326457;18.068708;Gamla stan
+59.326366;18.068714;Gamla stan
+...
+59.325556;18.145672;Djurgården
+59.325636;18.145759;Djurgården
+59.325237;18.145321;Djurgården
+59.325156;18.145236;Djurgården
+59.324906;18.146211;Djurgården
+59.324863;18.146367;Djurgården
+59.324779;18.146387;Djurgården
+...
+59.310212;18.045907;Södermalm
+59.310268;18.046027;Södermalm
+59.310328;18.046158;Södermalm
+59.313984;18.034002;Södermalm
+59.313452;18.032395;Södermalm
+
+
+Filter input and specify alternate name property. This example will only trace roads inside polygons where the value of property NAME_3 is Bergamo or Curno. It will also use the value from NAME_3 as name in the output.
+```
+$ ./extpoints2.js geojson/italy.geojson --filter NAME_3=Bergamo,Curno --name_property NAME_3
+
+45.706291;9.645854;Bergamo
+45.706415;9.645828;Bergamo
+45.70654;9.645815;Bergamo
+45.706664;9.64584;Bergamo
+45.706788;9.64585;Bergamo
+45.70691;9.645808;Bergamo
+45.705679;9.64582;Bergamo
+...
+45.689185;9.603347;Curno
+45.6892;9.602897;Curno
+45.689272;9.603471;Curno
+45.688732;9.602829;Curno
+45.688853;9.602847;Curno
+45.688961;9.602863;Curno
+
 
 ## Prerequisites ##
 You need to have [NodeJS](https://nodejs.org/en/) (version 6 or higher) installed. On mac you can use homebrew
