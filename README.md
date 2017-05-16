@@ -103,6 +103,33 @@ $ ./extpoints2.js geojson/italy.geojson --filter NAME_3=Bergamo,Curno --name_pro
 45.688961;9.602863;Curno
 ```
 
+```
+
+This example will trace roads that belong to the *province* Bergamo
+```
+$ ./extpoints2.js geojson/italy.geojson --filter NAME_2=Bergamo --name_property NAME_3
+
+45.705119;9.95441;Adrara San Martino
+45.705179;9.954567;Adrara San Martino
+45.705128;9.954576;Adrara San Martino
+45.705015;9.954596;Adrara San Martino
+45.704903;9.954617;Adrara San Martino
+...
+45.727559;9.964163;Adrara San Rocco
+45.727571;9.963825;Adrara San Rocco
+45.727678;9.964217;Adrara San Rocco
+45.727796;9.964271;Adrara San Rocco
+45.727915;9.964325;Adrara San Rocco
+45.728033;9.964379;Adrara San Rocco
+...
+45.684115;9.765223;Albano Sant' Alessandro
+45.684228;9.765287;Albano Sant' Alessandro
+45.684344;9.765336;Albano Sant' Alessandro
+45.684461;9.765386;Albano Sant' Alessandro
+45.684578;9.765434;Albano Sant' Alessandro
+...
+```
+
 ## Prerequisites ##
 You need to have [NodeJS](https://nodejs.org/en/) (version 6 or higher) installed. On mac you can use homebrew
 
