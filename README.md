@@ -128,6 +128,10 @@ $ ./extpoints2.js geojson/italy.geojson --filter NAME_2=Bergamo --name_property 
 ...
 ```
 
+## Getting data ##
+* Administrative areas from the whole world can be downloaded at [www.gadm.org](http://www.gadm.org) (must be converted to geojson from e.g shapefile).
+* [geojson.io](http://geojson.io) is a simple tool where you can draw polygons and save as geojson.
+
 ## Prerequisites ##
 You need to have [NodeJS](https://nodejs.org/en/) (version 6 or higher) installed. On mac you can use homebrew
 
