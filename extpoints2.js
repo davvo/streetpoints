@@ -16,7 +16,9 @@ const makeArray = (v) => v ? (Array.isArray(v) ? v : [v]) : []
 
 const filters = {}
 makeArray(args.filter).forEach(term => {
-	const [ name, values ] = term.split('=')
+	const split = term.split('=')
+	const name = split[0]
+	const values = split[1]
 	filters[name] = values.split(',')
 })
 
