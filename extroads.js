@@ -45,7 +45,8 @@ const roadTypes = [
 	'residential',
 	'unclassified',
 	'pedestrian',
-	'living_street'
+	'living_street',
+	'service'
 ]
 
 const query = 
